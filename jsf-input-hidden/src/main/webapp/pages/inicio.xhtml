@@ -1,0 +1,25 @@
+<ui:composition template="../templates/master.xhtml"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:define name="content">
+		<div style="border-bottom: 1px solid #CCC;padding:10px">
+			<h:panelGrid columns="1" columnClasses="col-1" style="width:100%;">
+				<h:outputText value="JSF inputHidden Example" />
+			</h:panelGrid>
+		</div>
+		<div id="container">
+			<h:form id="customerForm">
+				<h:panelGrid columns="2" style="width:600px;margin-left:calc(50% - 300px);margin-bottom:25px;">
+					<h:outputLabel value="First Name: " />
+					<h:inputText id="firstname" value="#{bean.firstName}" />
+					<h:outputLabel value="Last Name: " />
+					<h:inputText id="lastname" value="#{bean.lastName}" />
+				</h:panelGrid>
+				<h:commandButton id="submitButtom" value="Submit" action="result" />
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
